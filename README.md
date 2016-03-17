@@ -6,11 +6,11 @@ We chose 2c.
 We need:
 
 Class Person needs
--Time of request
--current floor
--desired floor
--time of entry
--time of exit
+1.Time of request
+2.current floor
+3.desired floor
+4.time of entry
+5.time of exit
 
 Class Elevator
 -current floor
