@@ -11,6 +11,7 @@ Class Person needs
 3.desired floor
 4.time of entry
 5.time of exit
+whyyy
 
 Class Elevator
 -current floor
