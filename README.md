@@ -6,7 +6,7 @@ We chose 2c.
 We need:
 
 Class Person
--Time of request
+Time of request
 -current floor
 -desired floor
 -time of entry
