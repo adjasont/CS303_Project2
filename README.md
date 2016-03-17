@@ -7,20 +7,25 @@ We need:
 
 Class Person needs
 
-1.Time of request
+-Time of request
 
-2.current floor
+-current floor
 
-3.desired floor
+-desired floor
 
-4.time of entry
+-time of entry
 
-5.time of exit
+-time of exit
+
 
 Class Elevator
+
 -current floor
+
 -current direction
+
 -sorted list of ints for up direction
+
 -sorted list of ints for down direction 
 
 3 Lists of Persons
