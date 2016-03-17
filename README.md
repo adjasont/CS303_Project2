@@ -6,12 +6,16 @@ We chose 2c.
 We need:
 
 Class Person needs
+
 1.Time of request
+
 2.current floor
+
 3.desired floor
+
 4.time of entry
+
 5.time of exit
-whyyy
 
 Class Elevator
 -current floor
