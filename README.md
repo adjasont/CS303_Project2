@@ -6,7 +6,6 @@ We chose 2c.
 We need:
 
 Class Person needs
-
 -Time of request
 
 -current floor
