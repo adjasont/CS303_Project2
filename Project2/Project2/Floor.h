@@ -1,24 +1,35 @@
 #pragma once
 #include <iostream>
 #include "Person.h"
-#include <vector>
+#include <queue>
 using namespace std;
 
 class Floor {
 private:
-	int num_people;
-	bool button_pushed;
-	char button_direction;
 	int floor_number;
-	vector<Person> peeps;
+	queue<Person> peeps;
 public:
 	Floor() { ; }
-	void setFloor(int floorNum, int numPeople, bool buttonPushed, char buttonDirection);
-	void setPeeps(Person peep) { peeps.push_back(peep); }
-	void sortPeeps();
+	void setFloor(int floorNum) { floor_number = floorNum; }
+	void push(Person peep) { peeps.push(peep); }
 	int getFloorNum() const { return floor_number; }
-	int getNumPeople() const { return num_people; }
-	bool buttonPushed() const { return button_pushed; }
-	char buttonDirection() const { return button_direction; }
-	void printPeeps() const;
+	int size() const { return peeps.size(); }
+	bool is_empty() const { return peeps.empty(); }
+	Person front() { return peeps.front(); }
+	void pop() { peeps.pop(); }
+	void createFloor(int floorNum);
 };
+
+void Floor::createFloor(int floorNum) {
+	int numPeeps = (rand() % 10); //Creates a random number of people on each floor.
+	setFloor(floorNum);
+	for (int j = 0; j < numPeeps; j++) {
+		Person person;
+		person.current_floor = floorNum;
+		int desiredFloor = ((rand() % 9) + 1);
+		while (desiredFloor == floorNum) //While loop so desired floor isnt the same as current floor
+			desiredFloor = ((rand() % 9) + 1);
+		person.desired_floor = desiredFloor;
+		push(person);
+	}
+}
